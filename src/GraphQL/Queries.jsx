@@ -14,3 +14,17 @@ export const GET_ALL_RECIPES = gql`
         }
     }
 `;
+export const GET_RECIPE = gql`
+    query($id: Int!){
+        recipe(id: $id){
+            id,
+            title,
+            ingredients,
+            description,
+            bakingTime,
+            source,
+            instructions,
+            notes
+        }
+    }
+`;

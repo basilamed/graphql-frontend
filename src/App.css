@@ -16,6 +16,11 @@ body {
   justify-content: space-between; /* Add space between the two columns */
 }
 
+#link{
+  text-decoration: none;
+  color: #fff;
+}
+
 .container {
   max-width: 400px; /* Adjust the width of each column */
   margin: 0;
@@ -78,6 +83,11 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin: 5px;
+}
+
+button{
+  margin: 5px;
 }
 
 .add-recipe-form button:hover {

@@ -2,6 +2,7 @@ import { React, useEffect, useState } from 'react';
 import { useQuery, gql, useMutation } from '@apollo/client';
 import { GET_ALL_RECIPES } from '../GraphQL/Queries';
 import { DELETE_RECIPE } from '../GraphQL/Mutations';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 
@@ -47,6 +48,9 @@ function GetRecipes() {
                     <p>{recipe.instructions}</p>
                     <p>{recipe.notes}</p>
                     <button onClick={() => deleteR(recipe.id)}>Delete</button>
+                    <button>
+                        <Link to={`/update/${recipe.id}`} id='link'>Update</Link>
+                    </button>
                 </div>
             ))}
         </div>
